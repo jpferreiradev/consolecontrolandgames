@@ -4,6 +4,7 @@ public class Cadastro {
     private String genero;
     private String plataforma;
     private static int ano;
+    
 
     // Aqui estão seus métodos
     public int getAno() {
@@ -17,13 +18,14 @@ public class Cadastro {
         return genero;
     }
     public String setGenero(String genero){
-        return genero;
+        return this.genero = genero;
+
     }
     public String getPlataforma(){
         return plataforma;
     }
     public String setPlataforma(String plataforma){
-        return plataforma;
+        return this.plataforma = plataforma;
     }
 
 

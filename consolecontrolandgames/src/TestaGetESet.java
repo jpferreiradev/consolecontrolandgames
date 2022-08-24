@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TestaGetESet {
     public static void main(String[] args) {
 
@@ -17,7 +19,6 @@ public class TestaGetESet {
         System.out.println("A plataforma informada foi: " + primeiroCadastro.getPlataforma());
         System.out.println("O gênero informado foi: " + primeiroCadastro.getGenero());
         System.out.println("O ano informado foi: " + primeiroCadastro.getAno());
-
 
 
     }

@@ -1,25 +1,35 @@
 import java.util.Scanner;
 
 public class TestaGetESet {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-       Cadastro primeiroCadastro = new Cadastro();
-       Cadastro segundoCadastro = new Cadastro();
-
-
-       primeiroCadastro.setAno(1991);
-       primeiroCadastro.setGenero("aventura");
-       primeiroCadastro.setPlataforma("playstation");
-
-       segundoCadastro.setAno(1992);
-       segundoCadastro.setGenero("aÃ§Ã£o");
-       segundoCadastro.setPlataforma("xbox");
-
-
-        System.out.println("A plataforma informada foi: " + primeiroCadastro.getPlataforma());
-        System.out.println("O gÃªnero informado foi: " + primeiroCadastro.getGenero());
-        System.out.println("O ano informado foi: " + primeiroCadastro.getAno());
-
-
-    }
+		
+		Cadastro primeiroCadastro = new Cadastro();	
+		Cadastro segundoCadastro = new Cadastro();
+		
+		
+		
+		primeiroCadastro.genero = "Aventura";
+		primeiroCadastro.plataforma = "Playstation";
+		primeiroCadastro.ano = 1991;
+		
+		segundoCadastro.genero = "Ação";
+		segundoCadastro.plataforma = "xbox";
+		segundoCadastro.ano = 1992;
+		
+		System.out.println(primeiroCadastro);
+		System.out.println(segundoCadastro);
+		
+		
+		
+		
+		
+	}
 }
+
+
+// Criação de objetos com construtores
+/*
+Cadastro primeiroCadastro = new Cadastro("playstation", "aventura", 1991);
+Cadastro segundoCadastro = new Cadastro("xbox", "acao", 1990);
+*/

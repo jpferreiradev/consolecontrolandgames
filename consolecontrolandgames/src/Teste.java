@@ -6,10 +6,14 @@ public class Teste {
        Cadastro p3 = new Cadastro("Luta","Xbox", 1998);
        Cadastro p4 = new Cadastro("Futibol", "Mega", 1999);
 
+       p1.status();
+       p2.status();
+       p3.status();
+       p4.status();
 
-       System.out.println(p1.getGenero());
-       System.out.println(p1.getPlataforma());
-       System.out.println(p1.getAno());
+
+
+
 
 
 

@@ -1,45 +1,41 @@
 public class Cadastro {
-	// Aqui est„o os seus atributos
+    // Aqui est√£o os seus atributos
 
-	String genero;
-	String plataforma;
-	int ano;
+    private String genero;
+    private String plataforma;
+    private int ano;
 
-	// Aqui vai ficar os seus primeiros construtores
-	
-	/*
-	public Cadastro(String genero, String plataforma, int ano) {
-		this.plataforma = plataforma;
-		this.genero = genero;
-		this.ano = ano;
-	}
-	*/
-	
-	// Aqui est„o seus mÈtodos
+    // Construtores e m√©todos especiais
+    public Cadastro(String ge, String pla, int ano) {
+        this.plataforma = plataforma;
+        this.genero = genero;
+        this.ano = ano;
+    }
 
-	public String getGenero() {
-		return this.genero;
-	}
+    public String getGenero(){
+        return this.genero;
+    }
+    public void setGenero(String ge){
+        this.genero = ge;
+    }
 
-	public String setGenero(String genero) {
-		return this.genero;
-	}
+    public String getPlataforma(){
+        return this.plataforma;
+    }
+    public void setPlataforma(String pla){
+        this.plataforma = pla;
+    }
 
-	public String getPlataforma() {
-		return plataforma;
-	}
+    public int getAno(){
+        return this.ano;
+    }
 
-	public String setPlataforma(String plataforma) {
-		return	this.plataforma = plataforma;
-		
-	}
+    public void setAno(int ano){
+        this.ano = ano;
+    }
 
-	public int getAno() {
-		return ano;
-	}
+    // M√©todos publicos
 
-	public int setAno(int ano) {
-		return this.ano = ano;
-	}
+
 
 }

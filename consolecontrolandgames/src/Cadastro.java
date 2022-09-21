@@ -1,12 +1,16 @@
 public class Cadastro {
     // Aqui estão os seus atributos
 
+    private String usuario;
     private String genero;
     private String plataforma;
     private int ano;
 
+
+
     // Construtores e métodos especiais
-    public Cadastro(String ge, String pla, int ano) {
+    public Cadastro(String usua, String ge, String pla, int ano) {
+        this.usuario = usua;
         this.genero = ge;
         this.plataforma = pla;
         this.ano = ano;
@@ -34,11 +38,19 @@ public class Cadastro {
         this.ano = ano;
     }
 
+    public String getUsuario(){
+        return this.usuario;
+
+    }
+    public void setUsuario(String usua){
+        this.usuario = usua;
+    }
+
     // Métodos publicos
 
     public void status(){
         System.out.println(" --------------------------------");
-        System.out.println("----------" + "CADASTRO 1" +"-------------");
+        System.out.println("----------" + getUsuario() +"-------------");
         System.out.println("O gênero escolhido foi: " + this.getGenero());
         System.out.println("A plataforma escolhida foi: " + this.getPlataforma());
         System.out.println("O ano do jogo é: " + this.getAno());

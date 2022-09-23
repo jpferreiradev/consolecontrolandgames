@@ -1,19 +1,10 @@
 public class Teste {
     public static void main(String args[]){
 
-       //Jogo p1 = new Jogo("JP","Aventura","Playstation", 1991);
+        Cadastro p1 = new Cadastro("JP",30,"masc");
+        Jogo p = new Jogo("Aventura","Playstation",1991,p1);
 
-
-
-
-
-
-
-
-
-
-
-
+        p.status();
 
     }
 }

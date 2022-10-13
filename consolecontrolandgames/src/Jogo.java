@@ -1,23 +1,32 @@
-public class Jogo implements Verificacao  {
+public class Jogo implements Verificacao {
 
     // Aqui estão os seus atributos
+    public String nomeDoJogo;
     public  String tipoDoJogo;
     private  String plataforma;
     private int anoLancamento;
 
-    private Cadastro usuario;
+    private Cadastro usuario; // Utilizando a classe
 
 
 
     // Aqui está o seu construtor e seus métodos especiais
 
-    public Jogo(String tpJogo,String plat,int anoLan, Cadastro usu){
+    public Jogo(String nomeJogo, String tpJogo,String plat,int anoLan, Cadastro usu){
+        this.nomeDoJogo = nomeJogo;
         this.tipoDoJogo = tpJogo;
         this.plataforma = plat;
         this.anoLancamento = anoLan;
         this.usuario = usu;
     }
 
+
+    public String getNomeDoJogo(){
+        return this.nomeDoJogo;
+    }
+    public void setNomeDoJogo(String nomeJogo){
+        this.nomeDoJogo = nomeJogo;
+    }
 
     public String getTipoDoJogo(){
         return this.tipoDoJogo;
@@ -48,38 +57,31 @@ public class Jogo implements Verificacao  {
         this.usuario = usu;
     }
 
+    @Override
+    public void jogado() {
+        System.out.println(usuario.getNome() + "já jogou o jogo " + getNomeDoJogo());
+    }
+
+    @Override
+    public void jogando() {
+        System.out.println(usuario.getNome() + " está jogando o jogo " + getNomeDoJogo());
+    }
+
+    @Override
+    public void jogoTerminado() {
+        System.out.println(usuario.getNome() + " já terminou o jogo " + getNomeDoJogo());
+    }
+
     public void status(){
         System.out.println("--------------------------");
-        System.out.println("------- " + usuario.getNome() +"----------------");
+        System.out.println("---O usuário foi: "+ usuario.getNome() + "----------------");
         System.out.println(" O tipo de jogo foi : " + getTipoDoJogo());
         System.out.println("Sua plataforma é: " + getPlataforma());
         System.out.println("Seu ano de lançamento foi: " + getAno());
         System.out.println("------------------------------------");
-    };
+    }
 
 }
 
 
-/*
- public void status(){
-        System.out.println(" --------------------------------");
-        //System.out.println("----------" + get() +"-------------");
-        System.out.println("O gênero escolhido foi: " + this.getGenero());
-        System.out.println("A plataforma escolhida foi: " + this.getPlataforma());
-        System.out.println("O ano do jogo é: " + this.getAno());
-        System.out.println("--------------------------------------");
-    }
 
- */
-
-/*
-
-public Cadastro getUsuario() {
-        return this.usuario;
-    }
-
-    public void setUsuario(Cadastro usu) {
-        this.usuario = usu;
-    }
-
- */

@@ -1,7 +1,7 @@
 public class Cadastro {
     // Aqui estão os seus atributos
 
-    public String nome;
+    private String nome;
     private int idade;
     private String generoSexual;
 
@@ -21,7 +21,7 @@ public class Cadastro {
         return this.nome;
 
     }
-    public void setNome( String usu){
+    public void setNome(String usu){
         this.nome= usu;
     }
 

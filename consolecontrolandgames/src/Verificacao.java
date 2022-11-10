@@ -4,8 +4,8 @@ public interface Verificacao {
     public void jogando();
     public void jogoTerminado();
 
+    public void jogoClassificado();
+
 
 
 }
-
-//public void status();

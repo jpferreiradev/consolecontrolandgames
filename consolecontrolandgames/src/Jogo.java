@@ -5,8 +5,7 @@ public class Jogo implements Verificacao {
     public  String tipoDoJogo;
     private  String plataforma;
     private int anoLancamento;
-
-    private Cadastro usuario; // Utilizando a classe
+    private Cadastro usuario; // Utilizando a classe Cadastro
 
 
 
@@ -18,6 +17,7 @@ public class Jogo implements Verificacao {
         this.plataforma = plat;
         this.anoLancamento = anoLan;
         this.usuario = usu;
+
     }
 
 
@@ -70,6 +70,15 @@ public class Jogo implements Verificacao {
     @Override
     public void jogoTerminado() {
         System.out.println(usuario.getNome() + " já terminou o jogo " + getNomeDoJogo());
+    }
+
+    @Override
+    public void jogoClassificado() {
+        if(getPlataforma().equals("Playstation") ){
+            System.out.println("Jogo da Playstation Plus");
+        } else if ((getPlataforma().equals("Xbox"))) {
+            System.out.println("Jogo da Gold Live Gold");
+        }
     }
 
     public void status(){

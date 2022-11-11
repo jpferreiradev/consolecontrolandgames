@@ -78,15 +78,21 @@ public class Jogo implements Verificacao {
             System.out.println("Jogo da Playstation Plus");
         } else if ((getPlataforma().equals("Xbox"))) {
             System.out.println("Jogo da Gold Live Gold");
+        } else if(getPlataforma().equals("Nintendo")){
+            System.out.println("Jogo da Nintendo Online");
         }
     }
 
     public void status(){
         System.out.println("--------------------------");
         System.out.println("---O usuário foi: "+ usuario.getNome() + "----------------");
+        System.out.println("A idade de " + usuario.getNome() + " é " + usuario.getIdade() + " anos ");
+        System.out.println("O general sexual de " + usuario.getNome()+ " é " + usuario.getGeneroSexual());
+        System.out.println("---------------------------");
         System.out.println(" O tipo de jogo foi : " + getTipoDoJogo());
         System.out.println("Sua plataforma é: " + getPlataforma());
         System.out.println("Seu ano de lançamento foi: " + getAno());
+        jogoClassificado();
         System.out.println("------------------------------------");
     }
 

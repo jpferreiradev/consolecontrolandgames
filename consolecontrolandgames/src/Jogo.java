@@ -1,17 +1,19 @@
+import java.util.Scanner;
+
 public class Jogo implements Verificacao {
 
     // Aqui estão os seus atributos
     public String nomeDoJogo;
-    public  String tipoDoJogo;
-    private  String plataforma;
+    public String tipoDoJogo;
+    private String plataforma;
     private int anoLancamento;
     private Cadastro usuario; // Utilizando a classe Cadastro
 
 
-
+    Scanner scan = new Scanner(System.in);
     // Aqui está o seu construtor e seus métodos especiais
 
-    public Jogo(String nomeJogo, String tpJogo,String plat,int anoLan, Cadastro usu){
+    public Jogo(String nomeJogo, String tpJogo, String plat, int anoLan, Cadastro usu) {
         this.nomeDoJogo = nomeJogo;
         this.tipoDoJogo = tpJogo;
         this.plataforma = plat;
@@ -20,40 +22,47 @@ public class Jogo implements Verificacao {
 
     }
 
+    public Jogo(){
 
-    public String getNomeDoJogo(){
+    }
+
+    public String getNomeDoJogo() {
         return this.nomeDoJogo;
     }
-    public void setNomeDoJogo(String nomeJogo){
+
+    public void setNomeDoJogo(String nomeJogo) {
         this.nomeDoJogo = nomeJogo;
     }
 
-    public String getTipoDoJogo(){
+    public String getTipoDoJogo() {
         return this.tipoDoJogo;
     }
-    public void setTipoDoJogo(String ti){
+
+    public void setTipoDoJogo(String ti) {
         this.tipoDoJogo = ti;
     }
 
-    public String getPlataforma(){
+    public String getPlataforma() {
         return this.plataforma;
     }
-    public void setPlataforma(String pla){
+
+    public void setPlataforma(String pla) {
         this.plataforma = pla;
     }
 
-    public int getAno(){
+    public int getAno() {
         return this.anoLancamento;
     }
 
-    public void setAno(int ano){
+    public void setAno(int ano) {
         this.anoLancamento = ano;
     }
 
     public Cadastro getUsuario() {
         return this.usuario;
     }
-    public void setUsuario(Cadastro usu){
+
+    public void setUsuario(Cadastro usu) {
         this.usuario = usu;
     }
 
@@ -74,20 +83,20 @@ public class Jogo implements Verificacao {
 
     @Override
     public void jogoClassificado() {
-        if(getPlataforma().equals("Playstation") ){
+        if (getPlataforma().equals("Playstation")) {
             System.out.println("Jogo da Playstation Plus");
         } else if ((getPlataforma().equals("Xbox"))) {
             System.out.println("Jogo da Gold Live Gold");
-        } else if(getPlataforma().equals("Nintendo")){
+        } else if (getPlataforma().equals("Nintendo")) {
             System.out.println("Jogo da Nintendo Online");
         }
     }
 
-    public void status(){
+    public void status() {
         System.out.println("--------------------------");
-        System.out.println("---O usuário foi: "+ usuario.getNome() + "----------------");
+        System.out.println("---O usuário foi: " + usuario.getNome() + "----------------");
         System.out.println("A idade de " + usuario.getNome() + " é " + usuario.getIdade() + " anos ");
-        System.out.println("O general sexual de " + usuario.getNome()+ " é " + usuario.getGeneroSexual());
+        System.out.println("O general sexual de " + usuario.getNome() + " é " + usuario.getGeneroSexual());
         System.out.println("---------------------------");
         System.out.println(" O tipo de jogo foi : " + getTipoDoJogo());
         System.out.println("Sua plataforma é: " + getPlataforma());
@@ -96,7 +105,22 @@ public class Jogo implements Verificacao {
         System.out.println("------------------------------------");
     }
 
+    public void opcaoMenu() {
+
+        System.out.println("-------------------");
+        System.out.println("Bem-vindo ao ConsoleControleGames");
+        System.out.println("Digite a opção que gostaria:");
+        String entrada =  scan.nextLine();
+        System.out.println(entrada);
+        System.out.println("--------------------");
+    }
+
 }
 
 
+/*
+
+
+
+ */
 

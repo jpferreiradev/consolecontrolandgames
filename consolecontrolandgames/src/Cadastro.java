@@ -1,9 +1,13 @@
+import java.util.Scanner;
+
 public class Cadastro {
     // Aqui estão os seus atributos
 
     private String nome;
     private int idade;
     private String generoSexual;
+
+    Scanner scan = new Scanner(System.in);
 
     // Construtores e métodos especiais
 
@@ -14,6 +18,7 @@ public class Cadastro {
         this.generoSexual = ge;
 
     }
+
 
     // Aqui os seus metodos get e set
 

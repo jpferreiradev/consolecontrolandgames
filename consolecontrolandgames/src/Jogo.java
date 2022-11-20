@@ -93,6 +93,16 @@ public class Jogo implements Verificacao {
         }
     }
 
+    public void opcaoMenu() {
+
+        System.out.println("-------------------");
+        System.out.println("Bem-vindo ao ConsoleControleGames");
+        System.out.println("Escolha a opção que gostaria:");
+        System.out.println("1: Adicionar os jogos" + " 2: Listar os jogos" + " 3: Deletar os jogos");
+        String entrada =  scan.nextLine();
+        System.out.println("Opção escolhida foi: " + Integer.parseInt(entrada));
+        System.out.println("--------------------");
+    }
     public void status() {
         System.out.println("--------------------------");
         System.out.println("---O usuário foi: " + usuario.getNome() + "----------------");
@@ -104,17 +114,6 @@ public class Jogo implements Verificacao {
         System.out.println("Seu ano de lançamento foi: " + getAno());
         jogoClassificado();
         System.out.println("------------------------------------");
-    }
-
-    public void opcaoMenu() {
-
-        System.out.println("-------------------");
-        System.out.println("Bem-vindo ao ConsoleControleGames");
-        System.out.println("Escolha a opção que gostaria:");
-        System.out.println("1: Adicionar os jogos" + " 2: Listar os jogos" + " 3: Deletar os jogos");
-        String entrada =  scan.nextLine();
-        System.out.println("Opção escolhida foi: " + Integer.parseInt(entrada));
-        System.out.println("--------------------");
     }
 
 

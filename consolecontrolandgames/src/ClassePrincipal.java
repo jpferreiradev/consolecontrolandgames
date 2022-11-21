@@ -6,6 +6,7 @@ public class ClassePrincipal {
         Jogo j[] = new Jogo[3];
         Jogo jp = new Jogo();
 
+        Menu m = new Menu();
 
         p[0] = new Cadastro  ("JP",30,"masc");
         p[1] = new Cadastro ("Thay",30,"fem");
@@ -15,7 +16,7 @@ public class ClassePrincipal {
         j[1] = new Jogo ("Final Fantasy","RPG","Xbox",1992,p[1]);
         j[2] = new Jogo("Super Mario","Aventura","Nintendo",1980,p[2]);
 
-        jp.opcaoMenu();
+        m.opcaoMenu();
 
     }
 
